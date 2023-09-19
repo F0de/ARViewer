@@ -8,22 +8,69 @@
 import UIKit
 
 class ListViewController: UIViewController {
-
+    //MARK: - Properties
+    
+    
+    enum Section {
+        case main
+    }
+    lazy var collectionView = UICollectionView()
+    var dataSource: DataSource!
+    var snapshot = DataSourceSnapshot()
+    
+    //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Setup Views Methods
+    
+    //MARK: - Setup CollectionView
+    private func createLayout() -> UICollectionViewLayout {
+        let modelTypeCellSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(69))
+        let modelTypeCell = NSCollectionLayoutItem(layoutSize: modelTypeCellSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [modelTypeCell])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
     }
-    */
+    
+    private func configureCollectionViewLayout() {
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        collectionView.delegate = self
+        collectionView.register(FolderCell.self, forCellWithReuseIdentifier: FolderCell.reuseIdentifier)
+        collectionView.register(ModelCell.self, forCellWithReuseIdentifier: ModelCell.reuseIdentifier)
+    }
+    
+    //MARK: - Setting Views
+    func setupViews() {
+        view.backgroundColor = .systemBackground
+        navigationItem.title = "3D Models"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        configureCollectionViewLayout()
+        configureCollectionViewDataSource()
+        applySnapshot(models: Folder.folders)
+        
+        addSubViews()
+        
+        setupLayout()
 
+    }
+    //MARK: - Setting
+    func addSubViews() {
+        view.addSubview(collectionView)
+    }
+    //MARK: - Layout
+    func setupLayout() {
+        
+        
+    }
 }

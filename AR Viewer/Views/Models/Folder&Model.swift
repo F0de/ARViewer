@@ -1,5 +1,5 @@
 //
-//  ModelType.swift
+//  Folder&Model.swift
 //  AR Viewer
 //
 //  Created by Влад Тимчук on 17.09.2023.
@@ -13,6 +13,7 @@ class Model: Identifiable, Hashable, Equatable {
     let id = UUID()
     var name: String
     var scene: SCNNode
+    var isSelected = false
     
     init(name: String, scene: SCNNode) {
         self.name = name

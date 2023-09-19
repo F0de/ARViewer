@@ -9,21 +9,54 @@
 /* Begin PBXBuildFile section */
 		F5CDF3962AB5DA14008F60CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */; };
 		F5CDF3982AB5DA14008F60CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */; };
-		F5CDF39A2AB5DA14008F60CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3992AB5DA14008F60CA /* ViewController.swift */; };
-		F5CDF39D2AB5DA14008F60CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF39B2AB5DA14008F60CA /* Main.storyboard */; };
+		F5CDF39A2AB5DA14008F60CA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3992AB5DA14008F60CA /* ARViewController.swift */; };
 		F5CDF39F2AB5DA16008F60CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF39E2AB5DA16008F60CA /* Assets.xcassets */; };
 		F5CDF3A22AB5DA16008F60CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3A02AB5DA16008F60CA /* LaunchScreen.storyboard */; };
+		F5CDF3B22AB66CEA008F60CA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3B12AB66CEA008F60CA /* ListViewController.swift */; };
+		F5CDF3B42AB70E2C008F60CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */; };
+		F5CDF3B72AB7144E008F60CA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3B62AB7144E008F60CA /* UIColorExtension.swift */; };
+		F5CDF3BA2AB71CF3008F60CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5CDF3B92AB71CF3008F60CA /* SnapKit */; };
+		F5CDF3BC2AB7356D008F60CA /* FolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3BB2AB7356D008F60CA /* FolderCell.swift */; };
+		F5CDF3BF2AB735C1008F60CA /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3BE2AB735C1008F60CA /* SelfConfiguringCell.swift */; };
+		F5CDF3C12AB737B1008F60CA /* LIstViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3C02AB737B1008F60CA /* LIstViewController+DataSource.swift */; };
+		F5CDF3C42AB7394B008F60CA /* Folder&Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3C32AB7394B008F60CA /* Folder&Model.swift */; };
+		F5CDF3CF2AB7436A008F60CA /* FixelText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C62AB74369008F60CA /* FixelText-Light.ttf */; };
+		F5CDF3D02AB7436A008F60CA /* FixelText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C72AB74369008F60CA /* FixelText-SemiBold.ttf */; };
+		F5CDF3D12AB7436A008F60CA /* FixelText-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C82AB74369008F60CA /* FixelText-ExtraBold.ttf */; };
+		F5CDF3D22AB7436A008F60CA /* FixelText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C92AB7436A008F60CA /* FixelText-Regular.ttf */; };
+		F5CDF3D32AB7436A008F60CA /* FixelText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3CA2AB7436A008F60CA /* FixelText-Bold.ttf */; };
+		F5CDF3D42AB7436A008F60CA /* FixelText-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3CB2AB7436A008F60CA /* FixelText-ExtraLight.ttf */; };
+		F5CDF3D52AB7436A008F60CA /* FixelText-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3CC2AB7436A008F60CA /* FixelText-Black.ttf */; };
+		F5CDF3D62AB7436A008F60CA /* FixelText-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3CD2AB7436A008F60CA /* FixelText-Thin.ttf */; };
+		F5CDF3D72AB7436A008F60CA /* FixelText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3CE2AB7436A008F60CA /* FixelText-Medium.ttf */; };
+		F5FD97072AB8848C009F19F1 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD97062AB8848C009F19F1 /* ModelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F5CDF3922AB5DA14008F60CA /* AR Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5CDF3992AB5DA14008F60CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F5CDF39C2AB5DA14008F60CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5CDF3992AB5DA14008F60CA /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		F5CDF39E2AB5DA16008F60CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5CDF3A12AB5DA16008F60CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5CDF3A32AB5DA16008F60CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5CDF3B12AB66CEA008F60CA /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F5CDF3B62AB7144E008F60CA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		F5CDF3BB2AB7356D008F60CA /* FolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCell.swift; sourceTree = "<group>"; };
+		F5CDF3BE2AB735C1008F60CA /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		F5CDF3C02AB737B1008F60CA /* LIstViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LIstViewController+DataSource.swift"; sourceTree = "<group>"; };
+		F5CDF3C32AB7394B008F60CA /* Folder&Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder&Model.swift"; sourceTree = "<group>"; };
+		F5CDF3C62AB74369008F60CA /* FixelText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Light.ttf"; sourceTree = "<group>"; };
+		F5CDF3C72AB74369008F60CA /* FixelText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-SemiBold.ttf"; sourceTree = "<group>"; };
+		F5CDF3C82AB74369008F60CA /* FixelText-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F5CDF3C92AB7436A008F60CA /* FixelText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Regular.ttf"; sourceTree = "<group>"; };
+		F5CDF3CA2AB7436A008F60CA /* FixelText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Bold.ttf"; sourceTree = "<group>"; };
+		F5CDF3CB2AB7436A008F60CA /* FixelText-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F5CDF3CC2AB7436A008F60CA /* FixelText-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Black.ttf"; sourceTree = "<group>"; };
+		F5CDF3CD2AB7436A008F60CA /* FixelText-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Thin.ttf"; sourceTree = "<group>"; };
+		F5CDF3CE2AB7436A008F60CA /* FixelText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Medium.ttf"; sourceTree = "<group>"; };
+		F5FD97062AB8848C009F19F1 /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5CDF3BA2AB71CF3008F60CA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +92,85 @@
 			children = (
 				F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */,
 				F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */,
-				F5CDF3992AB5DA14008F60CA /* ViewController.swift */,
-				F5CDF39B2AB5DA14008F60CA /* Main.storyboard */,
+				F5CDF3BD2AB735A3008F60CA /* Protocols */,
+				F5CDF3B52AB71435008F60CA /* UIExtensions */,
+				F5CDF3C52AB742B1008F60CA /* Fonts */,
+				F5CDF3AE2AB5E535008F60CA /* Views */,
 				F5CDF39E2AB5DA16008F60CA /* Assets.xcassets */,
 				F5CDF3A02AB5DA16008F60CA /* LaunchScreen.storyboard */,
 				F5CDF3A32AB5DA16008F60CA /* Info.plist */,
 			);
 			path = "AR Viewer";
+			sourceTree = "<group>";
+		};
+		F5CDF3AE2AB5E535008F60CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */,
+				F5CDF3AF2AB66CA4008F60CA /* ARView */,
+				F5CDF3B02AB66CB2008F60CA /* ListView */,
+				F5CDF3BB2AB7356D008F60CA /* FolderCell.swift */,
+				F5FD97062AB8848C009F19F1 /* ModelCell.swift */,
+				F5CDF3C22AB738B6008F60CA /* Models */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5CDF3AF2AB66CA4008F60CA /* ARView */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF3992AB5DA14008F60CA /* ARViewController.swift */,
+			);
+			path = ARView;
+			sourceTree = "<group>";
+		};
+		F5CDF3B02AB66CB2008F60CA /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF3B12AB66CEA008F60CA /* ListViewController.swift */,
+				F5CDF3C02AB737B1008F60CA /* LIstViewController+DataSource.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		F5CDF3B52AB71435008F60CA /* UIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF3B62AB7144E008F60CA /* UIColorExtension.swift */,
+			);
+			path = UIExtensions;
+			sourceTree = "<group>";
+		};
+		F5CDF3BD2AB735A3008F60CA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF3BE2AB735C1008F60CA /* SelfConfiguringCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F5CDF3C22AB738B6008F60CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF3C32AB7394B008F60CA /* Folder&Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F5CDF3C52AB742B1008F60CA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F5CDF3CC2AB7436A008F60CA /* FixelText-Black.ttf */,
+				F5CDF3CA2AB7436A008F60CA /* FixelText-Bold.ttf */,
+				F5CDF3C82AB74369008F60CA /* FixelText-ExtraBold.ttf */,
+				F5CDF3CB2AB7436A008F60CA /* FixelText-ExtraLight.ttf */,
+				F5CDF3C62AB74369008F60CA /* FixelText-Light.ttf */,
+				F5CDF3CE2AB7436A008F60CA /* FixelText-Medium.ttf */,
+				F5CDF3C92AB7436A008F60CA /* FixelText-Regular.ttf */,
+				F5CDF3C72AB74369008F60CA /* FixelText-SemiBold.ttf */,
+				F5CDF3CD2AB7436A008F60CA /* FixelText-Thin.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +189,9 @@
 			dependencies = (
 			);
 			name = "AR Viewer";
+			packageProductDependencies = (
+				F5CDF3B92AB71CF3008F60CA /* SnapKit */,
+			);
 			productName = "AR Viewer";
 			productReference = F5CDF3922AB5DA14008F60CA /* AR Viewer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +220,9 @@
 				Base,
 			);
 			mainGroup = F5CDF3892AB5DA14008F60CA;
+			packageReferences = (
+				F5CDF3B82AB71CF3008F60CA /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F5CDF3932AB5DA14008F60CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +237,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5CDF3D72AB7436A008F60CA /* FixelText-Medium.ttf in Resources */,
 				F5CDF3A22AB5DA16008F60CA /* LaunchScreen.storyboard in Resources */,
+				F5CDF3D22AB7436A008F60CA /* FixelText-Regular.ttf in Resources */,
+				F5CDF3D42AB7436A008F60CA /* FixelText-ExtraLight.ttf in Resources */,
 				F5CDF39F2AB5DA16008F60CA /* Assets.xcassets in Resources */,
-				F5CDF39D2AB5DA14008F60CA /* Main.storyboard in Resources */,
+				F5CDF3D12AB7436A008F60CA /* FixelText-ExtraBold.ttf in Resources */,
+				F5CDF3D52AB7436A008F60CA /* FixelText-Black.ttf in Resources */,
+				F5CDF3CF2AB7436A008F60CA /* FixelText-Light.ttf in Resources */,
+				F5CDF3D02AB7436A008F60CA /* FixelText-SemiBold.ttf in Resources */,
+				F5CDF3D32AB7436A008F60CA /* FixelText-Bold.ttf in Resources */,
+				F5CDF3D62AB7436A008F60CA /* FixelText-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +258,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5CDF39A2AB5DA14008F60CA /* ViewController.swift in Sources */,
+				F5CDF39A2AB5DA14008F60CA /* ARViewController.swift in Sources */,
+				F5CDF3C42AB7394B008F60CA /* Folder&Model.swift in Sources */,
+				F5CDF3BF2AB735C1008F60CA /* SelfConfiguringCell.swift in Sources */,
+				F5FD97072AB8848C009F19F1 /* ModelCell.swift in Sources */,
 				F5CDF3962AB5DA14008F60CA /* AppDelegate.swift in Sources */,
+				F5CDF3C12AB737B1008F60CA /* LIstViewController+DataSource.swift in Sources */,
+				F5CDF3BC2AB7356D008F60CA /* FolderCell.swift in Sources */,
+				F5CDF3B22AB66CEA008F60CA /* ListViewController.swift in Sources */,
+				F5CDF3B42AB70E2C008F60CA /* TabBarController.swift in Sources */,
 				F5CDF3982AB5DA14008F60CA /* SceneDelegate.swift in Sources */,
+				F5CDF3B72AB7144E008F60CA /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F5CDF39B2AB5DA14008F60CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F5CDF39C2AB5DA14008F60CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F5CDF3A02AB5DA16008F60CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -297,9 +417,9 @@
 				INFOPLIST_FILE = "AR Viewer/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +427,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "F0de.AR-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,9 +449,9 @@
 				INFOPLIST_FILE = "AR Viewer/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +459,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "F0de.AR-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +491,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5CDF3B82AB71CF3008F60CA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5CDF3B92AB71CF3008F60CA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5CDF3B82AB71CF3008F60CA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5CDF38A2AB5DA14008F60CA /* Project object */;
 }

@@ -1,5 +1,5 @@
 //
-//  ModelTypeCell.swift
+//  FolderCell.swift
 //  AR Viewer
 //
 //  Created by Влад Тимчук on 17.09.2023.
@@ -10,7 +10,7 @@ import SnapKit
 
 class FolderCell: UICollectionViewCell, SelfConfiguringCell {
     //MARK: - Public Properties
-    static let reuseIdentifier = "ModelTypeCell"
+    static let reuseIdentifier = "FolderCell"
 
     //MARK: - Initializers
     override init(frame: CGRect) {
@@ -64,8 +64,8 @@ class FolderCell: UICollectionViewCell, SelfConfiguringCell {
     }()
     
     //MARK: Update Content
-    func configure(with modelType: Folder) {
-        nameLabel.text = modelType.name
+    func configure(with folderType: Folder) {
+        nameLabel.text = folderType.name
     }
     
     //MARK: - Setting Views
