@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
+        let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

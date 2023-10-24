@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SwiftUI
+import RealmSwift
 
 class TabBarController: UITabBarController {
     
@@ -23,9 +25,18 @@ class TabBarController: UITabBarController {
         arViewTab.tabBarItem = arViewTabBarItem
         
         // ListView Tab
-        let listViewTab = UINavigationController(rootViewController: ListViewController())
-        let listViewtabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.bullet"), tag: 1)
-        listViewTab.tabBarItem = listViewtabBarItem
+        @ObservedResults(Folder.self) var folders
+        
+        func createDB() -> Folder {
+            let folder = Folder()
+            folder.name = "startFolder"
+            $folders.append(folder)
+            return folders.first!
+        }
+        
+        let listViewTab = UIHostingController(rootView: ListView(folder: folders.first ?? createDB()))
+        let listViewTabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.bullet"), tag: 1)
+        listViewTab.tabBarItem = listViewTabBarItem
         
         viewControllers = [arViewTab, listViewTab]
         tabBar.tintColor = UIColor.systemYellow

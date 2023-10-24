@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F515ECDF2ABF6B5000225887 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515ECDE2ABF6B4F00225887 /* APIManager.swift */; };
+		F515ECE52ABF7B9A00225887 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F515ECE42ABF7B9A00225887 /* art.scnassets */; };
+		F515ECE72AC218D100225887 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515ECE62AC218D100225887 /* ListView.swift */; };
+		F51F0B212AE1A9E400CF31D3 /* SubFoldersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F0B202AE1A9E400CF31D3 /* SubFoldersListView.swift */; };
+		F51F0B232AE1AA1F00CF31D3 /* FolderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F0B222AE1AA1F00CF31D3 /* FolderCellView.swift */; };
+		F51F0B252AE1AA8A00CF31D3 /* ModelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F0B242AE1AA8A00CF31D3 /* ModelCellView.swift */; };
+		F525C4352ADDD61700A988B1 /* AddModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525C4342ADDD61700A988B1 /* AddModelView.swift */; };
+		F525C4372ADDD62A00A988B1 /* AddSubFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525C4362ADDD62A00A988B1 /* AddSubFolderView.swift */; };
+		F53516A92AE70EEB00A9F688 /* ModelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53516A82AE70EEB00A9F688 /* ModelsListView.swift */; };
+		F564CF5C2ABC9881001063D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F564CF5B2ABC9881001063D6 /* GoogleService-Info.plist */; };
+		F59336452AE2E3D1005F3B24 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F59336442AE2E3D1005F3B24 /* SnapKit */; };
+		F593367F2AE2E436005F3B24 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F593367E2AE2E436005F3B24 /* RealmSwift */; };
+		F59336812AE2E47C005F3B24 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F59336802AE2E47C005F3B24 /* FirebaseStorage */; };
 		F5CDF3962AB5DA14008F60CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */; };
 		F5CDF3982AB5DA14008F60CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */; };
 		F5CDF39A2AB5DA14008F60CA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3992AB5DA14008F60CA /* ARViewController.swift */; };
 		F5CDF39F2AB5DA16008F60CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF39E2AB5DA16008F60CA /* Assets.xcassets */; };
 		F5CDF3A22AB5DA16008F60CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3A02AB5DA16008F60CA /* LaunchScreen.storyboard */; };
-		F5CDF3B22AB66CEA008F60CA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3B12AB66CEA008F60CA /* ListViewController.swift */; };
 		F5CDF3B42AB70E2C008F60CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */; };
 		F5CDF3B72AB7144E008F60CA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3B62AB7144E008F60CA /* UIColorExtension.swift */; };
-		F5CDF3BA2AB71CF3008F60CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5CDF3B92AB71CF3008F60CA /* SnapKit */; };
-		F5CDF3BC2AB7356D008F60CA /* FolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3BB2AB7356D008F60CA /* FolderCell.swift */; };
-		F5CDF3BF2AB735C1008F60CA /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3BE2AB735C1008F60CA /* SelfConfiguringCell.swift */; };
-		F5CDF3C12AB737B1008F60CA /* LIstViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3C02AB737B1008F60CA /* LIstViewController+DataSource.swift */; };
-		F5CDF3C42AB7394B008F60CA /* Folder&Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3C32AB7394B008F60CA /* Folder&Model.swift */; };
+		F5CDF3C42AB7394B008F60CA /* Folder&ARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3C32AB7394B008F60CA /* Folder&ARModel.swift */; };
 		F5CDF3CF2AB7436A008F60CA /* FixelText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C62AB74369008F60CA /* FixelText-Light.ttf */; };
 		F5CDF3D02AB7436A008F60CA /* FixelText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C72AB74369008F60CA /* FixelText-SemiBold.ttf */; };
 		F5CDF3D12AB7436A008F60CA /* FixelText-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C82AB74369008F60CA /* FixelText-ExtraBold.ttf */; };
@@ -29,10 +37,19 @@
 		F5CDF3D52AB7436A008F60CA /* FixelText-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3CC2AB7436A008F60CA /* FixelText-Black.ttf */; };
 		F5CDF3D62AB7436A008F60CA /* FixelText-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3CD2AB7436A008F60CA /* FixelText-Thin.ttf */; };
 		F5CDF3D72AB7436A008F60CA /* FixelText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3CE2AB7436A008F60CA /* FixelText-Medium.ttf */; };
-		F5FD97072AB8848C009F19F1 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD97062AB8848C009F19F1 /* ModelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F515ECDE2ABF6B4F00225887 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F515ECE42ABF7B9A00225887 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		F515ECE62AC218D100225887 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		F51F0B202AE1A9E400CF31D3 /* SubFoldersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFoldersListView.swift; sourceTree = "<group>"; };
+		F51F0B222AE1AA1F00CF31D3 /* FolderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCellView.swift; sourceTree = "<group>"; };
+		F51F0B242AE1AA8A00CF31D3 /* ModelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCellView.swift; sourceTree = "<group>"; };
+		F525C4342ADDD61700A988B1 /* AddModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModelView.swift; sourceTree = "<group>"; };
+		F525C4362ADDD62A00A988B1 /* AddSubFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubFolderView.swift; sourceTree = "<group>"; };
+		F53516A82AE70EEB00A9F688 /* ModelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsListView.swift; sourceTree = "<group>"; };
+		F564CF5B2ABC9881001063D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F5CDF3922AB5DA14008F60CA /* AR Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,13 +57,9 @@
 		F5CDF39E2AB5DA16008F60CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5CDF3A12AB5DA16008F60CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5CDF3A32AB5DA16008F60CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5CDF3B12AB66CEA008F60CA /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F5CDF3B62AB7144E008F60CA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		F5CDF3BB2AB7356D008F60CA /* FolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCell.swift; sourceTree = "<group>"; };
-		F5CDF3BE2AB735C1008F60CA /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
-		F5CDF3C02AB737B1008F60CA /* LIstViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LIstViewController+DataSource.swift"; sourceTree = "<group>"; };
-		F5CDF3C32AB7394B008F60CA /* Folder&Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder&Model.swift"; sourceTree = "<group>"; };
+		F5CDF3C32AB7394B008F60CA /* Folder&ARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder&ARModel.swift"; sourceTree = "<group>"; };
 		F5CDF3C62AB74369008F60CA /* FixelText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Light.ttf"; sourceTree = "<group>"; };
 		F5CDF3C72AB74369008F60CA /* FixelText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-SemiBold.ttf"; sourceTree = "<group>"; };
 		F5CDF3C82AB74369008F60CA /* FixelText-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -56,7 +69,6 @@
 		F5CDF3CC2AB7436A008F60CA /* FixelText-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Black.ttf"; sourceTree = "<group>"; };
 		F5CDF3CD2AB7436A008F60CA /* FixelText-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Thin.ttf"; sourceTree = "<group>"; };
 		F5CDF3CE2AB7436A008F60CA /* FixelText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Medium.ttf"; sourceTree = "<group>"; };
-		F5FD97062AB8848C009F19F1 /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,18 +76,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5CDF3BA2AB71CF3008F60CA /* SnapKit in Frameworks */,
+				F59336452AE2E3D1005F3B24 /* SnapKit in Frameworks */,
+				F59336812AE2E47C005F3B24 /* FirebaseStorage in Frameworks */,
+				F593367F2AE2E436005F3B24 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F515ECE82AC225C800225887 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F525C4332ADDD5D600A988B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F515ECE62AC218D100225887 /* ListView.swift */,
+				F51F0B202AE1A9E400CF31D3 /* SubFoldersListView.swift */,
+				F53516A82AE70EEB00A9F688 /* ModelsListView.swift */,
+				F51F0B222AE1AA1F00CF31D3 /* FolderCellView.swift */,
+				F51F0B242AE1AA8A00CF31D3 /* ModelCellView.swift */,
+				F525C4362ADDD62A00A988B1 /* AddSubFolderView.swift */,
+				F525C4342ADDD61700A988B1 /* AddModelView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F5CDF3892AB5DA14008F60CA = {
 			isa = PBXGroup;
 			children = (
 				F5CDF3942AB5DA14008F60CA /* AR Viewer */,
 				F5CDF3932AB5DA14008F60CA /* Products */,
+				F515ECE82AC225C800225887 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,45 +128,29 @@
 			children = (
 				F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */,
 				F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */,
+				F515ECDE2ABF6B4F00225887 /* APIManager.swift */,
+				F515ECE42ABF7B9A00225887 /* art.scnassets */,
 				F5CDF3BD2AB735A3008F60CA /* Protocols */,
 				F5CDF3B52AB71435008F60CA /* UIExtensions */,
 				F5CDF3C52AB742B1008F60CA /* Fonts */,
-				F5CDF3AE2AB5E535008F60CA /* Views */,
+				F5CDF3AE2AB5E535008F60CA /* Controllers */,
+				F525C4332ADDD5D600A988B1 /* Views */,
+				F5CDF3C22AB738B6008F60CA /* Models */,
 				F5CDF39E2AB5DA16008F60CA /* Assets.xcassets */,
 				F5CDF3A02AB5DA16008F60CA /* LaunchScreen.storyboard */,
 				F5CDF3A32AB5DA16008F60CA /* Info.plist */,
+				F564CF5B2ABC9881001063D6 /* GoogleService-Info.plist */,
 			);
 			path = "AR Viewer";
 			sourceTree = "<group>";
 		};
-		F5CDF3AE2AB5E535008F60CA /* Views */ = {
+		F5CDF3AE2AB5E535008F60CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */,
-				F5CDF3AF2AB66CA4008F60CA /* ARView */,
-				F5CDF3B02AB66CB2008F60CA /* ListView */,
-				F5CDF3BB2AB7356D008F60CA /* FolderCell.swift */,
-				F5FD97062AB8848C009F19F1 /* ModelCell.swift */,
-				F5CDF3C22AB738B6008F60CA /* Models */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		F5CDF3AF2AB66CA4008F60CA /* ARView */ = {
-			isa = PBXGroup;
-			children = (
 				F5CDF3992AB5DA14008F60CA /* ARViewController.swift */,
 			);
-			path = ARView;
-			sourceTree = "<group>";
-		};
-		F5CDF3B02AB66CB2008F60CA /* ListView */ = {
-			isa = PBXGroup;
-			children = (
-				F5CDF3B12AB66CEA008F60CA /* ListViewController.swift */,
-				F5CDF3C02AB737B1008F60CA /* LIstViewController+DataSource.swift */,
-			);
-			path = ListView;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F5CDF3B52AB71435008F60CA /* UIExtensions */ = {
@@ -144,7 +164,6 @@
 		F5CDF3BD2AB735A3008F60CA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				F5CDF3BE2AB735C1008F60CA /* SelfConfiguringCell.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -152,7 +171,7 @@
 		F5CDF3C22AB738B6008F60CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F5CDF3C32AB7394B008F60CA /* Folder&Model.swift */,
+				F5CDF3C32AB7394B008F60CA /* Folder&ARModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,7 +209,9 @@
 			);
 			name = "AR Viewer";
 			packageProductDependencies = (
-				F5CDF3B92AB71CF3008F60CA /* SnapKit */,
+				F59336442AE2E3D1005F3B24 /* SnapKit */,
+				F593367E2AE2E436005F3B24 /* RealmSwift */,
+				F59336802AE2E47C005F3B24 /* FirebaseStorage */,
 			);
 			productName = "AR Viewer";
 			productReference = F5CDF3922AB5DA14008F60CA /* AR Viewer.app */;
@@ -221,7 +242,9 @@
 			);
 			mainGroup = F5CDF3892AB5DA14008F60CA;
 			packageReferences = (
-				F5CDF3B82AB71CF3008F60CA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F59336432AE2E3D1005F3B24 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F59336482AE2E40E005F3B24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F593367B2AE2E435005F3B24 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = F5CDF3932AB5DA14008F60CA /* Products */;
 			projectDirPath = "";
@@ -239,9 +262,11 @@
 			files = (
 				F5CDF3D72AB7436A008F60CA /* FixelText-Medium.ttf in Resources */,
 				F5CDF3A22AB5DA16008F60CA /* LaunchScreen.storyboard in Resources */,
+				F515ECE52ABF7B9A00225887 /* art.scnassets in Resources */,
 				F5CDF3D22AB7436A008F60CA /* FixelText-Regular.ttf in Resources */,
 				F5CDF3D42AB7436A008F60CA /* FixelText-ExtraLight.ttf in Resources */,
 				F5CDF39F2AB5DA16008F60CA /* Assets.xcassets in Resources */,
+				F564CF5C2ABC9881001063D6 /* GoogleService-Info.plist in Resources */,
 				F5CDF3D12AB7436A008F60CA /* FixelText-ExtraBold.ttf in Resources */,
 				F5CDF3D52AB7436A008F60CA /* FixelText-Black.ttf in Resources */,
 				F5CDF3CF2AB7436A008F60CA /* FixelText-Light.ttf in Resources */,
@@ -258,15 +283,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F51F0B252AE1AA8A00CF31D3 /* ModelCellView.swift in Sources */,
+				F525C4372ADDD62A00A988B1 /* AddSubFolderView.swift in Sources */,
 				F5CDF39A2AB5DA14008F60CA /* ARViewController.swift in Sources */,
-				F5CDF3C42AB7394B008F60CA /* Folder&Model.swift in Sources */,
-				F5CDF3BF2AB735C1008F60CA /* SelfConfiguringCell.swift in Sources */,
-				F5FD97072AB8848C009F19F1 /* ModelCell.swift in Sources */,
+				F51F0B232AE1AA1F00CF31D3 /* FolderCellView.swift in Sources */,
+				F515ECE72AC218D100225887 /* ListView.swift in Sources */,
+				F5CDF3C42AB7394B008F60CA /* Folder&ARModel.swift in Sources */,
+				F525C4352ADDD61700A988B1 /* AddModelView.swift in Sources */,
 				F5CDF3962AB5DA14008F60CA /* AppDelegate.swift in Sources */,
-				F5CDF3C12AB737B1008F60CA /* LIstViewController+DataSource.swift in Sources */,
-				F5CDF3BC2AB7356D008F60CA /* FolderCell.swift in Sources */,
-				F5CDF3B22AB66CEA008F60CA /* ListViewController.swift in Sources */,
+				F515ECDF2ABF6B5000225887 /* APIManager.swift in Sources */,
 				F5CDF3B42AB70E2C008F60CA /* TabBarController.swift in Sources */,
+				F53516A92AE70EEB00A9F688 /* ModelsListView.swift in Sources */,
+				F51F0B212AE1A9E400CF31D3 /* SubFoldersListView.swift in Sources */,
 				F5CDF3982AB5DA14008F60CA /* SceneDelegate.swift in Sources */,
 				F5CDF3B72AB7144E008F60CA /* UIColorExtension.swift in Sources */,
 			);
@@ -338,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -395,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -419,7 +447,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,7 +479,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,7 +521,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F5CDF3B82AB71CF3008F60CA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		F59336432AE2E3D1005F3B24 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -501,13 +529,39 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		F59336482AE2E40E005F3B24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
+		F593367B2AE2E435005F3B24 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.43.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F5CDF3B92AB71CF3008F60CA /* SnapKit */ = {
+		F59336442AE2E3D1005F3B24 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F5CDF3B82AB71CF3008F60CA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = F59336432AE2E3D1005F3B24 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		F593367E2AE2E436005F3B24 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F593367B2AE2E435005F3B24 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		F59336802AE2E47C005F3B24 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F59336482AE2E40E005F3B24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
