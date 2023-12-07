@@ -9,9 +9,10 @@ import SwiftUI
 import RealmSwift
 
 struct ListView: View {
-    @ObservedResults(Folder.self) var folders
     @ObservedRealmObject var folder: Folder
-
+    @ObservedResults(Folder.self) var folders
+    @StateObject var manager = APIManager.shared
+    
     @State private var isShowingAddFolderSheet = false
     @State private var isShowingAddModelSheet = false
     
@@ -19,8 +20,15 @@ struct ListView: View {
         NavigationView {
             List {
                 ForEach(folder.subFolders) { folder in
-                    FolderCellView(folder: folder)
-                }.onDelete(perform: $folder.subFolders.remove)
+                    FolderCellView(folder: folder, manager: manager)
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                $folders.remove(folder)
+                            } label: {
+                                Image(systemName: "trash.fill")
+                            }
+                        }
+                }
             }
             .navigationTitle("3D Models")
             .listStyle(.plain)

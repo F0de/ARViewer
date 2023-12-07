@@ -6,25 +6,24 @@
 //
 
 import SwiftUI
+import RealmSwift
+import ARKit
 
 struct ModelCellView: View {
-    var name: String
-    
-    init(name: String) {
-        self.name = name
-    }
-    
+    @ObservedRealmObject var model: ARModel
+    let manager = APIManager.shared
+
     var body: some View {
         HStack {
-            Text(name)
+            Text(model.name)
                 .font(.custom("FixelText-Medium", size: 18))
             Spacer()
             Button {
                 // select model
+                manager.getModel(model)
             } label: {
                 Text("Select")
             }.buttonStyle(.borderedProminent)
-            
         }
     }
 }

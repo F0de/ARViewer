@@ -12,12 +12,15 @@ import FirebaseStorage
 
 struct AddModelView: View {
     @ObservedRealmObject var folder: Folder
-    
+    let manager = APIManager.shared
+
     @State private var name: String = ""
     @State private var fileRef: String = ""
+    @State private var fileURL: URL?
     @Environment(\.dismiss) var dismiss
     @State private var showFileImporter = false
-    
+    @State private var showingAlert = false
+
     var body: some View {
         NavigationView {
             VStack {
@@ -36,6 +39,13 @@ struct AddModelView: View {
                 .padding(.top, 20)
                 .tint(.blue)
                 Button {
+                    if let fileURL = fileURL {
+                        print("Selected file: \(fileURL.lastPathComponent)")
+                        fileRef = manager.addModel(name, to: folder, fileURL: fileURL)
+                    } else {
+                        showingAlert.toggle()
+                    }
+                    
                     let model = ARModel()
                     model.name = name
                     model.ref = fileRef
@@ -65,11 +75,14 @@ struct AddModelView: View {
             .fileImporter(isPresented: $showFileImporter, allowedContentTypes: [.usdz]) { result in //TODO: add all ARKit support file types
                 switch result {
                 case .success(let url):
-                    print("file loaded. URL: \(url)")
-                    fileRef = APIManager().addModel(name, to: folder, fileURL: url)
+                    print("File loaded. URL: \(url)")
+                    fileURL = url
                 case .failure(let error):
-                    print("Error while selecting a file: \(error)")
+                    print("Error while selecting a file. Error: \(error.localizedDescription)")
                 }
+            }
+            .alert("Error, file not loaded.", isPresented: $showingAlert) {
+                Button("OK", role: .cancel) { dismiss() }
             }
         }
     }

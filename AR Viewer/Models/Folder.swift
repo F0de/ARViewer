@@ -1,5 +1,5 @@
 //
-//  Folder&ARModel.swift
+//  Folder.swift
 //  AR Viewer
 //
 //  Created by Влад Тимчук on 17.09.2023.
@@ -7,10 +7,9 @@
 
 import Foundation
 import RealmSwift
-import FirebaseStorage
 
 // FolderCell data type
-class Folder: Object, Identifiable {
+class Folder: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var name: String
     
@@ -18,19 +17,6 @@ class Folder: Object, Identifiable {
     @Persisted var models: List<ARModel> = List<ARModel>()
     
     @Persisted(originProperty: "subFolders") var folder: LinkingObjects<Folder>
-    
-    override class func primaryKey() -> String? {
-        "id"
-    }
-}
-
-// ARModelCell data type
-class ARModel: Object, Identifiable {
-    @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var name: String
-    @Persisted var ref: String
-    
-    @Persisted(originProperty: "models") var folder: LinkingObjects<Folder>
     
     override class func primaryKey() -> String? {
         "id"

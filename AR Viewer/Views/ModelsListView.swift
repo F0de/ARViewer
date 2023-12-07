@@ -10,12 +10,22 @@ import RealmSwift
 
 struct ModelsListView: View {
     @ObservedRealmObject var folder: Folder
-    
+    @ObservedResults(ARModel.self) var models
+    let manager = APIManager.shared
+
     @State private var isShowingAddModelSheet = false
 
     var body: some View {
         List(folder.models, id: \.id) { model in
-            ModelCellView(name: model.name)
+            ModelCellView(model: model)
+                .swipeActions(edge: .trailing) {
+                    Button(role: .destructive) {
+                        $models.remove(model)
+                        manager.deleteModel(model)
+                    } label: {
+                        Image(systemName: "trash.fill")
+                    }
+                }
         }
         .navigationTitle("3D Models")
         .listStyle(.plain)

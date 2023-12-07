@@ -10,11 +10,12 @@ import RealmSwift
 
 struct FolderCellView: View {
     @ObservedRealmObject var folder: Folder
-        
+    @ObservedObject var manager: APIManager
+
     var body: some View {
         NavigationLink {
             if folder.models.isEmpty {
-                SubFoldersListView(folder: folder)
+                SubFoldersListView(folder: folder, manager: manager)
             } else {
                 ModelsListView(folder: folder)
             }

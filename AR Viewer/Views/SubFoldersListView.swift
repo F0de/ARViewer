@@ -9,16 +9,25 @@ import SwiftUI
 import RealmSwift
 
 struct SubFoldersListView: View {
-    @ObservedRealmObject var folder: Folder
-    
+    @ObservedRealmObject var folder: Folder        
+    @ObservedResults(Folder.self) var folders
+    @ObservedObject var manager: APIManager
+
     @State private var isShowingAddFolderSheet = false
     @State private var isShowingAddModelSheet = false
     
     var body: some View {
         List {
             ForEach(folder.subFolders) { folder in
-                FolderCellView(folder: folder)
-            }.onDelete(perform: $folder.subFolders.remove)
+                FolderCellView(folder: folder, manager: manager)
+                    .swipeActions(edge: .trailing) {
+                        Button(role: .destructive) {
+                            $folders.remove(folder)
+                        } label: {
+                            Image(systemName: "trash.fill")
+                        }
+                    }
+            }
         }
         .listStyle(.plain)
         .environment(\.defaultMinListRowHeight, 70)

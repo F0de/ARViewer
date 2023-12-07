@@ -5,18 +5,23 @@
 //  Created by Влад Тимчук on 23.09.2023.
 //
 
-import Foundation
 import Firebase
 import FirebaseStorage
 import RealmSwift
+import ARKit
+import RealityKit
 
 final class APIManager: ObservableObject {
+    static let shared = APIManager() // Singleton
+    private init() { }
     
+    @Published var modelEntity = Entity()
+
     //MARK: - Realm MongoDB
     func getPath(for folder: Folder) -> String {
         var path = String()
         if let parentFolder = folder.folder.first {
-            path += getPath(for: parentFolder) + "\(parentFolder.name)/\(folder.name)"
+            path += getPath(for: parentFolder) + "/\(folder.name)"
         }
         return path
     }
@@ -26,52 +31,86 @@ final class APIManager: ObservableObject {
     
     //MARK: Adding model file from iPhone file system to Firebase Storage
     func addModel(_ modelName: String, to folder: Folder, fileURL: URL) -> String {
-        print("path: " + getPath(for: folder))
-        let folderRef = storageRef.child(getPath(for: folder))
+        print("path: startFolder" + getPath(for: folder))
+        let folderRef = storageRef.child("startFolder" + getPath(for: folder))
         
-        folderRef.putFile(from: fileURL, metadata: nil) { metadata, error in
-            if let error = error {
-                print("Error loading file: \(error)")
-            } else {
-                print("File load succesfully")
+        let serialQueue = DispatchQueue(label: "uploadSceneToFBStorage.serial-queue", qos: .utility)
+
+        fileURL.startAccessingSecurityScopedResource()
+        
+        // convert URL to Data
+        do {
+            let data = try Data(contentsOf: fileURL)
+            
+            // upload scene data to FB Storage
+            serialQueue.async {
+                folderRef.child("\(modelName).usdz").putData(data) { result in
+                    switch result {
+                    case .success:
+                        print("[FB Storage] File load to FB successfully")
+                    case .failure(let error):
+                        print("[FB Storage] Error loading file to FB. Error: \(error.localizedDescription)")
+                    }
+                }
+            }
+
+        } catch {
+            print("Error converting URL to Data. Error: \(error)")
+        }
+        
+        fileURL.stopAccessingSecurityScopedResource()
+        
+        return "startFolder" + getPath(for: folder)
+    }
+    
+    //MARK: Deleting model file from Firebase Storage
+    func deleteModel(_ model: ARModel) {
+        let modelRef = storageRef.child(model.ref).child("\(model.name).usdz")
+        let serialQueue = DispatchQueue(label: "deletingScene.serial-queue", qos: .utility)
+        
+        // deleting scene from FB Storage
+        serialQueue.sync {
+            modelRef.delete { error in
+                if let error = error {
+                    print("[FB Storage] Error deleting file. Error: \(error)")
+                } else {
+                    print("[FB Storage] File deleted successfully")
+                }
             }
         }
-        return getPath(for: folder)
+        print("Deleted \(model.name) from picturesDic")
     }
     
     //MARK: Getting model files from Firebase Storage
-    func getModel(_ modelName: String, format: String, parent: String, completion: @escaping (Data?) -> Void) {
-        let macsRef = storageRef.child("models/electronics/Apple/Mac")
-        let displaysRef = storageRef.child("models/electronics/Apple/displays")
-        let iPhonesRef = storageRef.child("models/electronics/Apple/iPhone")
+    func getModel(_ model: ARModel) {
+        let modelRef = storageRef.child(model.ref).child("\(model.name).usdz")
+        print("ref to get model: \(modelRef)")
         
-        var defaultData = Data()
-        if let path = Bundle.main.path(forResource: "art.scnassets/ship", ofType: "scn") {
-            do {
-                defaultData = try Data(contentsOf: URL(fileURLWithPath: path))
-            } catch {
-                print("Error uploading file: \(error)")
-            }
-        } else {
-            print("File not found")
-        }
-        
-        var modelRef: StorageReference
-        switch parent {
-        case "Mac": modelRef = macsRef.child("\(modelName).\(format)")
-        case "iPhone": modelRef = iPhonesRef.child("\(modelName).\(format)")
-        case "displays": modelRef = displaysRef.child("\(modelName).\(format)")
-        default: modelRef = storageRef.child("models/\(modelName).\(format)")
-        }
-        
-        modelRef.getData(maxSize: 10000000) { data, error in
-            guard error == nil else { completion(defaultData); return }
-            
-            if let error = error {
-                print("Error downloading model: \(error)")
-                completion(nil)
-            } else {
-                completion(data)
+        let serialQueue = DispatchQueue(label: "downloadSceneFromFBStorage.serial-queue", qos: .utility)
+        serialQueue.async {
+            // download scene url from FB Storage
+            modelRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
+                if let error = error {
+                    print("[FB Storage] Error downloading file. \(error)")
+                }
+                print("[FB Storage] Successfully download file.")
+                
+                if let usdzData = data {
+                    do {
+                        let temporaryURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(model.name).usdz")
+                        try usdzData.write(to: temporaryURL)
+                        
+                        let modelEntity = try ModelEntity.load(contentsOf: temporaryURL)
+                        
+                        DispatchQueue.main.async { [weak self] in
+                            guard let strongSelf = self else { return }                            
+                            strongSelf.modelEntity = modelEntity
+                        }
+                        
+                    } catch {
+                        print("Failed to load model from data: \(error)")
+                    }
+                }
             }
         }
     }

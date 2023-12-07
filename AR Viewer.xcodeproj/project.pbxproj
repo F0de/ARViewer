@@ -20,6 +20,7 @@
 		F59336452AE2E3D1005F3B24 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F59336442AE2E3D1005F3B24 /* SnapKit */; };
 		F593367F2AE2E436005F3B24 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F593367E2AE2E436005F3B24 /* RealmSwift */; };
 		F59336812AE2E47C005F3B24 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F59336802AE2E47C005F3B24 /* FirebaseStorage */; };
+		F5C966802AE9AF9200A745FF /* ARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C9667F2AE9AF9200A745FF /* ARModel.swift */; };
 		F5CDF3962AB5DA14008F60CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */; };
 		F5CDF3982AB5DA14008F60CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */; };
 		F5CDF39A2AB5DA14008F60CA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3992AB5DA14008F60CA /* ARViewController.swift */; };
@@ -27,7 +28,7 @@
 		F5CDF3A22AB5DA16008F60CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3A02AB5DA16008F60CA /* LaunchScreen.storyboard */; };
 		F5CDF3B42AB70E2C008F60CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */; };
 		F5CDF3B72AB7144E008F60CA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3B62AB7144E008F60CA /* UIColorExtension.swift */; };
-		F5CDF3C42AB7394B008F60CA /* Folder&ARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3C32AB7394B008F60CA /* Folder&ARModel.swift */; };
+		F5CDF3C42AB7394B008F60CA /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3C32AB7394B008F60CA /* Folder.swift */; };
 		F5CDF3CF2AB7436A008F60CA /* FixelText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C62AB74369008F60CA /* FixelText-Light.ttf */; };
 		F5CDF3D02AB7436A008F60CA /* FixelText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C72AB74369008F60CA /* FixelText-SemiBold.ttf */; };
 		F5CDF3D12AB7436A008F60CA /* FixelText-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3C82AB74369008F60CA /* FixelText-ExtraBold.ttf */; };
@@ -50,6 +51,7 @@
 		F525C4362ADDD62A00A988B1 /* AddSubFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubFolderView.swift; sourceTree = "<group>"; };
 		F53516A82AE70EEB00A9F688 /* ModelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsListView.swift; sourceTree = "<group>"; };
 		F564CF5B2ABC9881001063D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F5C9667F2AE9AF9200A745FF /* ARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARModel.swift; sourceTree = "<group>"; };
 		F5CDF3922AB5DA14008F60CA /* AR Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		F5CDF3A32AB5DA16008F60CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F5CDF3B62AB7144E008F60CA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		F5CDF3C32AB7394B008F60CA /* Folder&ARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder&ARModel.swift"; sourceTree = "<group>"; };
+		F5CDF3C32AB7394B008F60CA /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		F5CDF3C62AB74369008F60CA /* FixelText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Light.ttf"; sourceTree = "<group>"; };
 		F5CDF3C72AB74369008F60CA /* FixelText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-SemiBold.ttf"; sourceTree = "<group>"; };
 		F5CDF3C82AB74369008F60CA /* FixelText-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -171,7 +173,8 @@
 		F5CDF3C22AB738B6008F60CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F5CDF3C32AB7394B008F60CA /* Folder&ARModel.swift */,
+				F5CDF3C32AB7394B008F60CA /* Folder.swift */,
+				F5C9667F2AE9AF9200A745FF /* ARModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,10 +291,11 @@
 				F5CDF39A2AB5DA14008F60CA /* ARViewController.swift in Sources */,
 				F51F0B232AE1AA1F00CF31D3 /* FolderCellView.swift in Sources */,
 				F515ECE72AC218D100225887 /* ListView.swift in Sources */,
-				F5CDF3C42AB7394B008F60CA /* Folder&ARModel.swift in Sources */,
+				F5CDF3C42AB7394B008F60CA /* Folder.swift in Sources */,
 				F525C4352ADDD61700A988B1 /* AddModelView.swift in Sources */,
 				F5CDF3962AB5DA14008F60CA /* AppDelegate.swift in Sources */,
 				F515ECDF2ABF6B5000225887 /* APIManager.swift in Sources */,
+				F5C966802AE9AF9200A745FF /* ARModel.swift in Sources */,
 				F5CDF3B42AB70E2C008F60CA /* TabBarController.swift in Sources */,
 				F53516A92AE70EEB00A9F688 /* ModelsListView.swift in Sources */,
 				F51F0B212AE1A9E400CF31D3 /* SubFoldersListView.swift in Sources */,
