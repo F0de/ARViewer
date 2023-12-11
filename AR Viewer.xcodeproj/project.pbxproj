@@ -16,6 +16,7 @@
 		F525C4352ADDD61700A988B1 /* AddModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525C4342ADDD61700A988B1 /* AddModelView.swift */; };
 		F525C4372ADDD62A00A988B1 /* AddSubFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F525C4362ADDD62A00A988B1 /* AddSubFolderView.swift */; };
 		F53516A92AE70EEB00A9F688 /* ModelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53516A82AE70EEB00A9F688 /* ModelsListView.swift */; };
+		F535FDC42B27584D00C02B04 /* ARViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535FDC32B27584D00C02B04 /* ARViewExtension.swift */; };
 		F564CF5C2ABC9881001063D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F564CF5B2ABC9881001063D6 /* GoogleService-Info.plist */; };
 		F59336452AE2E3D1005F3B24 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F59336442AE2E3D1005F3B24 /* SnapKit */; };
 		F593367F2AE2E436005F3B24 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F593367E2AE2E436005F3B24 /* RealmSwift */; };
@@ -50,6 +51,7 @@
 		F525C4342ADDD61700A988B1 /* AddModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModelView.swift; sourceTree = "<group>"; };
 		F525C4362ADDD62A00A988B1 /* AddSubFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubFolderView.swift; sourceTree = "<group>"; };
 		F53516A82AE70EEB00A9F688 /* ModelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsListView.swift; sourceTree = "<group>"; };
+		F535FDC32B27584D00C02B04 /* ARViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewExtension.swift; sourceTree = "<group>"; };
 		F564CF5B2ABC9881001063D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F5C9667F2AE9AF9200A745FF /* ARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARModel.swift; sourceTree = "<group>"; };
 		F5CDF3922AB5DA14008F60CA /* AR Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				F5CDF3B62AB7144E008F60CA /* UIColorExtension.swift */,
+				F535FDC32B27584D00C02B04 /* ARViewExtension.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				F515ECDF2ABF6B5000225887 /* APIManager.swift in Sources */,
 				F5C966802AE9AF9200A745FF /* ARModel.swift in Sources */,
 				F5CDF3B42AB70E2C008F60CA /* TabBarController.swift in Sources */,
+				F535FDC42B27584D00C02B04 /* ARViewExtension.swift in Sources */,
 				F53516A92AE70EEB00A9F688 /* ModelsListView.swift in Sources */,
 				F51F0B212AE1A9E400CF31D3 /* SubFoldersListView.swift in Sources */,
 				F5CDF3982AB5DA14008F60CA /* SceneDelegate.swift in Sources */,

@@ -17,6 +17,7 @@ class ARViewController: UIViewController {
     private let manager = APIManager.shared
 
     private lazy var arView = ARView()
+    private lazy var removeAllButton = UIButton(type: .system)
     private var cancellables = Set<AnyCancellable>()
     
     deinit {
@@ -32,7 +33,7 @@ class ARViewController: UIViewController {
         
         let tapGestureRecognizer = UITapGestureRecognizer(
             target: self,
-            action: #selector(handleTap(recognizer: )))
+            action: #selector(spawnObject(recognizer: )))
         arView.addGestureRecognizer(tapGestureRecognizer)
     }
     
@@ -41,6 +42,7 @@ class ARViewController: UIViewController {
         
         setUpSceneView()
         
+//        // auto adding object when he updated in manager
 //        manager.$modelEntity
 //            .sink { [weak self] updateModelEntity in
 //                guard let strongSelf = self else { return }
@@ -65,34 +67,42 @@ class ARViewController: UIViewController {
         }
         arView.session.run(config)
         arView.debugOptions = .showFeaturePoints
+        arView.enableObjectRemoval()
     }
     
-    @objc private func handleTap(recognizer: UITapGestureRecognizer) {
+    @objc private func spawnObject(recognizer: UITapGestureRecognizer) {
         let location = recognizer.location(in: arView)
         
-        let results = arView.raycast(
-            from: location,
-            allowing: .estimatedPlane,
-            alignment: .any)
+        let results = arView.raycast(from: location, allowing: .estimatedPlane, alignment: .any)
         guard let firstResult = results.first else { return }
         
-        if let anchor = firstResult.anchor {
-            //TODO: delete object
-            
-        } else {
-            let anchor = ARAnchor(transform: firstResult.worldTransform)
-    //        arView.scene.anchors.removeAll()
-            arView.session.add(anchor: anchor)
-            
-            let anchorEntity = AnchorEntity(anchor: anchor)
-            anchorEntity.addChild(manager.modelEntity)
-            
-            arView.scene.addAnchor(anchorEntity)
-        }
+        // placing
+        let anchor = ARAnchor(transform: firstResult.worldTransform)
+        arView.session.add(anchor: anchor)
+        
+        let anchorEntity = AnchorEntity(anchor: anchor)
+        anchorEntity.name = manager.modelEntity.name
+        anchorEntity.addChild(manager.modelEntity)
+        arView.scene.addAnchor(anchorEntity)
+        
+        // movement
+        manager.modelEntity.generateCollisionShapes(recursive: true)
+        arView.installGestures(.all, for: manager.modelEntity)
+    }
+    
+    private func setupRemoveAllUIButton() {
+        removeAllButton.backgroundColor = .systemYellow
+        removeAllButton.layer.cornerRadius = 16
+        removeAllButton.setTitle("Remove All", for: .normal)
+        removeAllButton.titleLabel?.font = UIFont(name: "FixelText-SemiBold", size: 18)
+        removeAllButton.tintColor = .white
+        removeAllButton.addTarget(self, action: #selector(didTapRemoveAllButton), for: .touchUpInside)
     }
     
     //MARK: - Setting Views
     func setupViews() {
+        
+        setupRemoveAllUIButton()
         
         addSubViews()
         
@@ -102,6 +112,7 @@ class ARViewController: UIViewController {
     //MARK: - Setting
     func addSubViews() {
         view.addSubview(arView)
+        view.addSubview(removeAllButton)
     }
     //MARK: - Layout
     func setupLayout() {
@@ -110,5 +121,17 @@ class ARViewController: UIViewController {
             make.left.right.bottom.equalToSuperview()
         }
         
+        removeAllButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-15)
+            make.leading.equalTo(view.safeAreaLayoutGuide).offset(15)
+            make.trailing.equalTo(view.safeAreaLayoutGuide).offset(-15)
+            make.height.equalTo(50)
+        }
+        
+    }
+    
+    //MARK: - Actions
+    @objc private func didTapRemoveAllButton() {
+        arView.scene.anchors.removeAll()
     }
 }

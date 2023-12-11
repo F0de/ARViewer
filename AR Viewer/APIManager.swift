@@ -15,7 +15,7 @@ final class APIManager: ObservableObject {
     static let shared = APIManager() // Singleton
     private init() { }
     
-    @Published var modelEntity = Entity()
+    @Published var modelEntity = ModelEntity()
 
     //MARK: - Realm MongoDB
     func getPath(for folder: Folder) -> String {
@@ -89,7 +89,7 @@ final class APIManager: ObservableObject {
         let serialQueue = DispatchQueue(label: "downloadSceneFromFBStorage.serial-queue", qos: .utility)
         serialQueue.async {
             // download scene url from FB Storage
-            modelRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
+            modelRef.getData(maxSize: 100 * 1024 * 1024) { data, error in
                 if let error = error {
                     print("[FB Storage] Error downloading file. \(error)")
                 }
@@ -100,13 +100,13 @@ final class APIManager: ObservableObject {
                         let temporaryURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(model.name).usdz")
                         try usdzData.write(to: temporaryURL)
                         
-                        let modelEntity = try ModelEntity.load(contentsOf: temporaryURL)
+                        let loadedEntity = try ModelEntity.loadModel(contentsOf: temporaryURL)
+                        loadedEntity.name = model.name
                         
                         DispatchQueue.main.async { [weak self] in
                             guard let strongSelf = self else { return }                            
-                            strongSelf.modelEntity = modelEntity
+                            strongSelf.modelEntity = loadedEntity
                         }
-                        
                     } catch {
                         print("Failed to load model from data: \(error)")
                     }

@@ -39,7 +39,7 @@ class TabBarController: UITabBarController {
         listViewTab.tabBarItem = listViewTabBarItem
         
         viewControllers = [arViewTab, listViewTab]
-        tabBar.tintColor = UIColor.systemYellow
+        tabBar.tintColor = .systemYellow
 //        tabBar.unselectedItemTintColor = UIColor(hex: "999999")
 //        tabBar.backgroundColor = UIColor(hex: "161616", alpha: 0.94)
         tabBar.backgroundColor = .tertiarySystemBackground
