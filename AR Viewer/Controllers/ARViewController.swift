@@ -80,7 +80,8 @@ class ARViewController: UIViewController {
         let anchor = ARAnchor(transform: firstResult.worldTransform)
         arView.session.add(anchor: anchor)
         
-        let anchorEntity = AnchorEntity(anchor: anchor)
+//        let anchorEntity = AnchorEntity(anchor: anchor)
+        let anchorEntity = AnchorEntity()
         anchorEntity.name = manager.modelEntity.name
         anchorEntity.addChild(manager.modelEntity)
         arView.scene.addAnchor(anchorEntity)

@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    @StateObject var viewModel = AuthViewModel()
 
     var window: UIWindow?
 
@@ -18,7 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = TabBarController()
+        if viewModel.userSession != nil {
+            window?.rootViewController = TabBarController()
+        } else {
+            let signInView = SignInView()
+                .environmentObject(viewModel)
+            window?.rootViewController = UIHostingController(rootView: signInView)
+        }
         window?.makeKeyAndVisible()
         let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
     }
