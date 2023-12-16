@@ -530,7 +530,7 @@
 				DEVELOPMENT_ASSET_PATHS = "AR\\ Viewer/Resources";
 				DEVELOPMENT_TEAM = X936W7QRV9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AR Viewer/Info.plist";
+				INFOPLIST_FILE = "AR Viewer/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -563,7 +563,7 @@
 				DEVELOPMENT_ASSET_PATHS = "AR\\ Viewer/Resources";
 				DEVELOPMENT_TEAM = X936W7QRV9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AR Viewer/Info.plist";
+				INFOPLIST_FILE = "AR Viewer/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
