@@ -8,13 +8,13 @@
 import UIKit
 import RealityKit
 
-extension ARView {
+extension RealityKit.ARView {
     func enableObjectRemoval() {
-        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(recognizer:)))
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
         self.addGestureRecognizer(longPressGestureRecognizer)
     }
     
-    @objc func handleLongPress(recognizer: UILongPressGestureRecognizer) {
+    @objc func handleLongPress(_ recognizer: UILongPressGestureRecognizer) {
         let location = recognizer.location(in: self)
         
         if let entity = self.entity(at: location) {

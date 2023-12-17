@@ -20,7 +20,7 @@ class TabBarController: UITabBarController {
         super.viewWillAppear(animated)
         
         // ARView Tab
-        let arViewTab = ARViewController()
+        let arViewTab = UIHostingController(rootView: ARView())
         let arViewTabBarItem = UITabBarItem(title: "AR", image: UIImage(systemName: "arkit"), tag: 0)
         arViewTab.tabBarItem = arViewTabBarItem
         

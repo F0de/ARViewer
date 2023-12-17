@@ -26,8 +26,6 @@
 		F5AE371D2B29F83500B48492 /* ErrorMessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AE371C2B29F83500B48492 /* ErrorMessageTextView.swift */; };
 		F5C966802AE9AF9200A745FF /* ARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C9667F2AE9AF9200A745FF /* ARModel.swift */; };
 		F5CDF3962AB5DA14008F60CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */; };
-		F5CDF3982AB5DA14008F60CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */; };
-		F5CDF39A2AB5DA14008F60CA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3992AB5DA14008F60CA /* ARViewController.swift */; };
 		F5CDF39F2AB5DA16008F60CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF39E2AB5DA16008F60CA /* Assets.xcassets */; };
 		F5CDF3A22AB5DA16008F60CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CDF3A02AB5DA16008F60CA /* LaunchScreen.storyboard */; };
 		F5CDF3B42AB70E2C008F60CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */; };
@@ -47,6 +45,10 @@
 		F5FE15BD2B2A6E2F00EF4404 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE15BC2B2A6E2F00EF4404 /* AuthViewModel.swift */; };
 		F5FE15BF2B2A748900EF4404 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F5FE15BE2B2A748900EF4404 /* FirebaseFirestore */; };
 		F5FE15C12B2A749100EF4404 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F5FE15C02B2A749100EF4404 /* FirebaseFirestoreSwift */; };
+		F5FE15C92B2E284B00EF4404 /* AR_ViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE15C82B2E284B00EF4404 /* AR_ViewerApp.swift */; };
+		F5FE15CB2B2E2B6300EF4404 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE15CA2B2E2B6300EF4404 /* TabBarView.swift */; };
+		F5FE15CE2B2E318700EF4404 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5FE15CD2B2E318700EF4404 /* Preview Assets.xcassets */; };
+		F5FE15D02B2E325300EF4404 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FE15CF2B2E325300EF4404 /* ARView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,8 +68,6 @@
 		F5C9667F2AE9AF9200A745FF /* ARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARModel.swift; sourceTree = "<group>"; };
 		F5CDF3922AB5DA14008F60CA /* AR Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5CDF3992AB5DA14008F60CA /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		F5CDF39E2AB5DA16008F60CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5CDF3A12AB5DA16008F60CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5CDF3A32AB5DA16008F60CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,10 +83,13 @@
 		F5CDF3CC2AB7436A008F60CA /* FixelText-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Black.ttf"; sourceTree = "<group>"; };
 		F5CDF3CD2AB7436A008F60CA /* FixelText-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Thin.ttf"; sourceTree = "<group>"; };
 		F5CDF3CE2AB7436A008F60CA /* FixelText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Medium.ttf"; sourceTree = "<group>"; };
-		F5FE15B52B2A2BD900EF4404 /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
 		F5FE15B72B2A669500EF4404 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F5FE15B92B2A69D600EF4404 /* UserFIrebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFIrebase.swift; sourceTree = "<group>"; };
 		F5FE15BC2B2A6E2F00EF4404 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		F5FE15C82B2E284B00EF4404 /* AR_ViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_ViewerApp.swift; sourceTree = "<group>"; };
+		F5FE15CA2B2E2B6300EF4404 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		F5FE15CD2B2E318700EF4404 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5FE15CF2B2E325300EF4404 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +112,6 @@
 		F515ECE82AC225C800225887 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5FE15B52B2A2BD900EF4404 /* RealityKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,6 +119,8 @@
 		F525C4332ADDD5D600A988B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F5FE15CA2B2E2B6300EF4404 /* TabBarView.swift */,
+				F5FE15CF2B2E325300EF4404 /* ARView.swift */,
 				F5FE15C72B2A7DC400EF4404 /* List */,
 				F5AE37132B2921BE00B48492 /* Auth */,
 			);
@@ -168,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				F5CDF3B32AB70E2C008F60CA /* TabBarController.swift */,
-				F5CDF3992AB5DA14008F60CA /* ARViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,9 +234,10 @@
 			children = (
 				F5CDF3C52AB742B1008F60CA /* Fonts */,
 				F5CDF39E2AB5DA16008F60CA /* Assets.xcassets */,
-				F5CDF3A02AB5DA16008F60CA /* LaunchScreen.storyboard */,
+				F5FE15CC2B2E315200EF4404 /* Preview Content */,
 				F5CDF3A32AB5DA16008F60CA /* Info.plist */,
 				F564CF5B2ABC9881001063D6 /* GoogleService-Info.plist */,
+				F5CDF3A02AB5DA16008F60CA /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -241,8 +245,8 @@
 		F5FE15C52B2A7CD200EF4404 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F5FE15C82B2E284B00EF4404 /* AR_ViewerApp.swift */,
 				F5CDF3952AB5DA14008F60CA /* AppDelegate.swift */,
-				F5CDF3972AB5DA14008F60CA /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -267,6 +271,14 @@
 				F525C4342ADDD61700A988B1 /* AddModelView.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		F5FE15CC2B2E315200EF4404 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F5FE15CD2B2E318700EF4404 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +358,7 @@
 				F5CDF3D42AB7436A008F60CA /* FixelText-ExtraLight.ttf in Resources */,
 				F5CDF39F2AB5DA16008F60CA /* Assets.xcassets in Resources */,
 				F564CF5C2ABC9881001063D6 /* GoogleService-Info.plist in Resources */,
+				F5FE15CE2B2E318700EF4404 /* Preview Assets.xcassets in Resources */,
 				F5CDF3D12AB7436A008F60CA /* FixelText-ExtraBold.ttf in Resources */,
 				F5CDF3D52AB7436A008F60CA /* FixelText-Black.ttf in Resources */,
 				F5CDF3CF2AB7436A008F60CA /* FixelText-Light.ttf in Resources */,
@@ -366,12 +379,13 @@
 				F5AE37172B292B8500B48492 /* SignInView.swift in Sources */,
 				F51F0B252AE1AA8A00CF31D3 /* ModelCellView.swift in Sources */,
 				F525C4372ADDD62A00A988B1 /* AddSubFolderView.swift in Sources */,
-				F5CDF39A2AB5DA14008F60CA /* ARViewController.swift in Sources */,
+				F5FE15D02B2E325300EF4404 /* ARView.swift in Sources */,
 				F51F0B232AE1AA1F00CF31D3 /* FolderCellView.swift in Sources */,
 				F515ECE72AC218D100225887 /* ListView.swift in Sources */,
 				F5CDF3C42AB7394B008F60CA /* Folder.swift in Sources */,
 				F525C4352ADDD61700A988B1 /* AddModelView.swift in Sources */,
 				F5FE15BA2B2A69D600EF4404 /* UserFIrebase.swift in Sources */,
+				F5FE15CB2B2E2B6300EF4404 /* TabBarView.swift in Sources */,
 				F5CDF3962AB5DA14008F60CA /* AppDelegate.swift in Sources */,
 				F515ECDF2ABF6B5000225887 /* APIManager.swift in Sources */,
 				F5C966802AE9AF9200A745FF /* ARModel.swift in Sources */,
@@ -381,7 +395,7 @@
 				F5FE15BD2B2A6E2F00EF4404 /* AuthViewModel.swift in Sources */,
 				F53516A92AE70EEB00A9F688 /* ModelsListView.swift in Sources */,
 				F51F0B212AE1A9E400CF31D3 /* SubFoldersListView.swift in Sources */,
-				F5CDF3982AB5DA14008F60CA /* SceneDelegate.swift in Sources */,
+				F5FE15C92B2E284B00EF4404 /* AR_ViewerApp.swift in Sources */,
 				F5CDF3B72AB7144E008F60CA /* UIColorExtension.swift in Sources */,
 				F5FE15B82B2A669500EF4404 /* User.swift in Sources */,
 			);
